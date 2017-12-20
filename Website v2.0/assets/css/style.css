@@ -58,7 +58,7 @@ h1 {
 
 .head-title {
 	z-index: 99;
-	color: #FFFFFF/*#E7402B*/;
+	color: #FFFFFF;
 	font-size: 18px;
 	font-family: 'Crete Round', Arial , serif;
 }
@@ -110,46 +110,58 @@ h1 {
 	background-size: cover;
 }
 /**************************/
-
 .controller {
     height: 30px;
     display: flex;
     justify-content: center;
     align-items: space-around;
     flex-wrap:wrap;
-    margin-top: 10px;
+    margin-top: 14px;
 }
 
 .p-left {
     font-size: 18px;
-    color: #FFFFFF/*#E7402B*/;
+    color: #FFFFFF;
     font-family: 'Crete Round', Arial , serif;
 }
 
-.i-right {
+.p-right {
+    margin-left: 250px;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-family: 'Crete Round', Arial , serif;
+}
+
+.i-right-note {
     margin-top: 20px;
     margin-left: 15px;
-    color: #FFFFFF/*#E7402B*/;
+    color: #FFFFFF;
+}
+
+.i-right-git {
+    margin-top: 20px;
+    margin-left: 15px;
+    color: #FFFFFF;
 }
 
 /***BUTTON***/
+/***NOTE***/
 .download {
 	z-index: 99;
 }
 
-.center-wrap {
+.center-wrap-note {
     position: absolute;
-    left: calc(50% - 125px);
+    left: calc(50% - 370px);
     width: 250px;
     height: 200px;
 }
 
-.button {
+.button-note {
 	z-index: 99;
     position: relative;
     display: block;
-    margin-top: 60px;
-	
+    margin-top: 55px;
     background: none center center no-repeat;
     background-size: cover;
     border: 2px solid red;
@@ -165,18 +177,18 @@ h1 {
     transition: border 1s cubic-bezier(0.19,1,.22,1), color .6s cubic-bezier(0.19,1,.22,1), background 5s cubic-bezier(0.19,1,.22,1);
 }
 
-.button a {
-    color: #171814/*#FF464C*/;
+.button-note a {
+    color: #171814;
     font-family: 'Varela Round';
     text-decoration: none;
 }
 
-.button .mask {
+.button-note .mask-note {
     background: #fff;
     background: rgba(255,255,255,0.5);
 }
 
-.button .mask {
+.button-note .mask-note {
     position: absolute;
     display: block;
     width: 200px;
@@ -187,39 +199,116 @@ h1 {
     transition: all 1.1s cubic-bezier(0.19,1,.22,1);
 }
 
-.button .shift {
+.button-note .shift-note {
     -webkit-transition: all 1.1s cubic-bezier(0.19,1,.22,1);
     transition: all 1.1s cubic-bezier(0.19,1,.22,1);
 }
 
-.button:hover {
+.button-note:hover {
     border-color: #fff;
     /* box-shadow: 0 0 5px rgba(255,245,245,0.8); */
     /* background-image: url('http://cuinine.com/img/codepen/savvy.jpg'); */
 }
 
-.button:hover a {
+.button-note:hover a {
     color: #fff;
 }
 
-.button:hover .mask {
+.button-note:hover .mask-note {
     background: #fff;
     -webkit-transform: translate3d(120%,-100px,0) rotate3d(0,0,1,90deg);
     transform: translate3d(120%,-100px,0) rotate3d(0,0,1,90deg);
 }
 
-.button:hover .shift {
+.button-note:hover .shift-note {
+    padding-left: 5px;
+}
+/***GIT***/
+.center-wrap-git {
+    position: absolute;
+    left: calc(50% + 120px);
+    width: 250px;
+    height: 200px;
+}
+
+.button-git {
+    z-index: 99;
+    position: relative;
+    display: block;
+    margin-top: 55px;
+    background: none center center no-repeat;
+    background-size: cover;
+    border: 2px solid red;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    padding: 20px 15px;
+    text-align: center;
+    max-width: 270px;
+    min-width: 200px;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-transition: border 1s cubic-bezier(0.19,1,.22,1),color .6s cubic-bezier(0.19,1,.22,1);
+    transition: border 1s cubic-bezier(0.19,1,.22,1), color .6s cubic-bezier(0.19,1,.22,1), background 5s cubic-bezier(0.19,1,.22,1);
+}
+
+.button-git a {
+    color: #171814;
+    font-family: 'Varela Round';
+    text-decoration: none;
+}
+
+.button-git .mask-git {
+    background: #fff;
+    background: rgba(255,255,255,0.5);
+}
+
+.button-git .mask-git {
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 100px;
+    -webkit-transform: translate3d(-120%,-50px,0) rotate3d(0,0,1,45deg);
+    transform: translate3d(-120%,-50px,0) rotate3d(0,0,1,45deg);
+    -webkit-transition: all 1.1s cubic-bezier(0.19,1,.22,1);
+    transition: all 1.1s cubic-bezier(0.19,1,.22,1);
+}
+
+.button-git .shift-git {
+    -webkit-transition: all 1.1s cubic-bezier(0.19,1,.22,1);
+    transition: all 1.1s cubic-bezier(0.19,1,.22,1);
+}
+
+.button-git:hover {
+    border-color: #fff;
+    /* box-shadow: 0 0 5px rgba(255,245,245,0.8); */
+    /* background-image: url('http://cuinine.com/img/codepen/savvy.jpg'); */
+}
+
+.button-git:hover a {
+    color: #fff;
+}
+
+.button-git:hover .mask-git {
+    background: #fff;
+    -webkit-transform: translate3d(120%,-100px,0) rotate3d(0,0,1,90deg);
+    transform: translate3d(120%,-100px,0) rotate3d(0,0,1,90deg);
+}
+
+.button-git:hover .shift-git {
     padding-left: 5px;
 }
 
+
+
+/***BUTTON-END***/
 footer {
     margin-top: 170px;
-	z-index: 30;
+	z-index: 99;
+    font-size: 13px;
 }
 
 /* Shapes & Animation
 */
-
 .epic-icon {
     font-size:210%!important;
     opacity:0.5;

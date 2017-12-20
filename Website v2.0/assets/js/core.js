@@ -1,7 +1,6 @@
 //
 // Shape spawner
 //
-
 var pause = false;
 var placed_elements = new Array();
 
@@ -139,10 +138,4 @@ TweenMax.set(line, {
   drawSVG: "0% 0%"
 });
 
-
 /****************************************************/
-
-
-
-
-
